@@ -27,8 +27,8 @@ pipeline:
                       echo "Welcome to Harness CI"
                       dotnet restore
                       dotnet build --no-restore
-
-                              platform:
+                      dotnet test --build --verbosity normal
+          platform:
             os: Windows
             arch: Amd64
           runtime:
